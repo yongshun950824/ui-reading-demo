@@ -16,12 +16,8 @@ body {
   background-color: white;
 }
 
-body.fixed-sidebar.mini-navbar #page-wrapper {
+body.fixed-sidebar #page-wrapper {
   margin: 0;
-}
-
-body.mini-navbar #page-wrapper {
-  margin: 0 0 0 70px;
 }
 
 p {
@@ -46,6 +42,11 @@ p {
   text-decoration: none;
 }
 
+.navbar .navbar-header a .logo-img {
+  height: 45px;
+  width: 100%;
+}
+
 .navbar .navbar-header a .logo {
   font-size: 0.75rem;
 }
@@ -68,18 +69,9 @@ nav .navbar-menu {
   justify-content: flex-end !important;
 }
 
-body.fixed-sidebar.mini-navbar .navbar-default .nav li a span {
+body.fixed-sidebar .navbar-default .nav li a span {
   display: inline;
-  font-size: 16px;
   margin: 15px;
-}
-
-body.mini-navbar .navbar-default .nav li a span {
-  display: none;
-}
-
-body.mini-navbar .navbar-default .nav > li > a {
-  font-size: 16px;
 }
 
 .nav.navbar-right {
