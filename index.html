@@ -20,8 +20,6 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-
-    <link rel="stylesheet" href="./site.css" />
   </head>
   <body class="fixed-sidebar mini-navbar">
     <div id="page-wrapper">
@@ -34,13 +32,17 @@
                 src="https://merchant.vodus.my/images/Vodus%20V3%20Merchant%20Logo%20Horizontal.svg"
                 class="logo-img logo-horizontal"
               />
+              <!-- <div class="logo">
+                <span class="brand">VODUS</span>
+                <span class="site">MERCHANT</span>
+              </div> -->
             </a>
           </div>
 
-          <div class="navbar-menu col-lg-10 col" style="padding: 0">
-            <a
-              href="javascript:void(0);"
-              class="hamburger-icon"
+          <div class="navbar-menu col-lg-10 col p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
               data-toggle="collapse"
               data-target="#navbar-right"
               aria-controls="navbar-right"
@@ -48,17 +50,16 @@
               aria-label="Toggle navigation"
             >
               <i class="fa fa-bars"></i>
-            </a>
-            <!-- collapse navbar-collapse -->
+            </button>
             <ul
-              class="nav navbar-top-links navbar-right navbar-right-hide"
+              class="nav navbar-top-links navbar-right navbar-collapse collapse"
               id="navbar-right"
             >
               <li>
                 <a href="#"><span>Market Research</span></a>
               </li>
               <li>
-                <a href="#"><span>Rewards</span></a>
+                <a href="#"><span>Vodus Shop</span></a>
               </li>
               <li>
                 <a href="#"><span>Learning Centre</span></a>
@@ -67,7 +68,9 @@
                 <a href="#"><span>About Us</span></a>
               </li>
               <li>
-                <a href="#"><span>Sign Up | Login</span></a>
+                <a href="#">
+                  <span>Sign Up | <b>Login</b></span></a
+                >
               </li>
             </ul>
           </div>
@@ -84,76 +87,10 @@
       </div>
 
       <div class="container article-container">
-        <div class="topics d-flex flex-wrap">
-          <div class="topic-card selected" data-tag="all">All Topic</div>
-          <div class="topic-card" data-tag="Guide">Guide</div>
-          <div class="topic-card" data-tag="Learning">Learning</div>
-          <div class="topic-card" data-tag="VodusUpdate">Vodus Updates</div>
-          <div class="topic-card" data-tag="Payments">Payments</div>
-          <div class="topic-card" data-tag="IndustryNews">Industry News</div>
-        </div>
+        <div id="topics" class="topics d-flex flex-wrap"></div>
 
-        <div class="article-card-container">
-          <div class="article-card" style="">
-            <div
-              class="img-div"
-              style="
-                background-image: url(https://vodusresearch.files.wordpress.com/2022/07/pexels-photo-696205.jpeg);
-              "
-            >
-              <span class="topic-tag learning">Learning</span>
-            </div>
-            <div class="card-content">
-              <div class="card-title">
-                <h3>How to sell on vodus?</h3>
-              </div>
-              <div class="card-paragraph">
-                <p>
-                  Excellent salespeople tend to share a similar set of skills
-                  and qualities. While attributes like extroversion and humor
-                  can help improve sales, there are several tactics anyone can
-                  use to help improve their sales. Having a collection of
-                  selling strategies to try can vastly improve your success rate
-                  with customers. In this article, we explain […]
-                </p>
-
-                <a class="read-more" href="/resources/15/how-to-sell-on-vodus">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="article-card-container" class="article-card-container"></div>
       </div>
     </div>
-    <!-- <div>
-      <label>Guides</label>
-      <div>How to register as a Vodus Merchant within 10 minutes</div>
-      <div>
-        So your read to become a merchant seller? This step-by-step guide gives
-        you everything yo need to have your store set up within 10 minutes.
-      </div>
-      <a href="#">Read more</a>
-    </div>
-
-    <div>
-      <label>Learning</label>
-      <div>When are people most likely to shop online</div>
-      <div>
-        A recent study by Vodus Research has shown that over 45% of online
-        shopping happens between the hours of 18:00 - 22:00 on weekdays.
-      </div>
-      <a href="#">Read more</a>
-    </div>
-
-    <div>
-      <label>Guides</label>
-      <div>When to increase your product discounts & by how much</div>
-      <div>
-        With so many sales happening throughout the year many merchants are left
-        wondering how and when to adjust the discounts on their products.
-      </div>
-      <a href="#">Read more</a>
-    </div> -->
   </body>
 </html>

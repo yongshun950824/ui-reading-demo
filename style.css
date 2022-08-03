@@ -2,6 +2,12 @@
   --dark-purple: #7903e9;
   --bright-purple: #8c37f6;
   --teal-green: #07b6c7;
+  --orange-yellow: #f5bd1f;
+}
+
+html {
+  /* font-size: 14px !important; */
+  font-family: Lato, Glacial Indifference;
 }
 
 body {
@@ -33,7 +39,31 @@ p {
   z-index: 999;
 }
 
-.navbar-menu {
+.navbar .navbar-header a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar-header a:hover {
+  text-decoration: none;
+}
+
+/* .navbar .navbar-header a .logo {
+  width: 150px;
+}
+
+.navbar .navbar-header a .logo .brand {
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.navbar .navbar-header a .logo .site {
+  letter-spacing: 3px;
+} */
+
+nav .navbar-menu {
   display: flex;
   align-items: center;
   justify-content: flex-end !important;
@@ -58,6 +88,10 @@ body.mini-navbar .navbar-default .nav > li > a {
   font-size: 16px;
 }
 
+.nav.navbar-right {
+  margin-right: 0;
+}
+
 .nav.navbar-right > li > a {
   color: white;
 }
@@ -71,7 +105,8 @@ body.mini-navbar .navbar-default .nav > li > a {
 }
 
 .nav.navbar-top-links li a {
-  padding: 14px 10px;
+  /* padding: 14px 10px; */
+  padding: 14px 20px;
   min-height: 50px;
 }
 
@@ -106,18 +141,19 @@ a:hover {
   text-decoration: none;
 }
 
-.hamburger-icon {
+.navbar-toggler {
   display: none;
   font-size: 24px;
   margin: 10px 20px;
   color: white;
+  text-decoration: none;
 }
 
 /* Article */
-.article-container {
-  max-width: 1400px;
+/* .article-container {
+   max-width: 1400px; 
   margin: auto;
-}
+} */
 
 .article-card-container {
   margin-top: 10px;
@@ -128,7 +164,7 @@ a:hover {
 .article-card {
   display: flex;
   flex-flow: wrap;
-  width: 320px;
+  width: 300px;
   padding: 0.5em 1em;
   align-content: flex-start;
 }
@@ -137,6 +173,8 @@ a:hover {
   height: 160px;
   width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 30%);
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +189,24 @@ a:hover {
 }
 
 .article-card .img-div .topic-tag.learning {
+  background-color: var(--orange-yellow);
+}
+
+.article-card .img-div .topic-tag.guides {
   background-color: var(--teal-green);
+}
+
+.article-card .img-div .topic-tag.vodusupdates {
+  background-color: var(--dark-purple);
+  color: yellow;
+}
+
+.article-card .img-div .topic-tag.payments {
+  background-color: darkslategrey;
+}
+
+.article-card .img-div .topic-tag.industrynews {
+  background-color: #6666ff;
 }
 
 .topics {
@@ -166,6 +221,7 @@ a:hover {
   border-radius: 3px;
   margin: 5px;
   cursor: pointer;
+  font-style: italic;
 }
 
 .topic-card.selected {
@@ -178,7 +234,7 @@ a:hover {
 }
 
 .card-content a {
-  color: #8c37f6;
+  color: var(--bright-purple);
   cursor: pointer;
 }
 
@@ -187,42 +243,94 @@ a:hover {
 }
 
 .card-paragraph p {
-  text-overflow: ellipsis;
-  white-space: wrap;
+  margin: 0;
+  color: gray;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.card-content h5 {
+  font-weight: 600;
+  line-height: 1.4em;
 }
 
 /* Body */
 
+.full-width {
+  width: 100%;
+}
+
 @media (min-width: 993px) {
   .navbar-right {
-    display: block !important;
+    display: flex !important;
+    justify-content: flex-end;
   }
 }
 
 @media (max-width: 992px) {
-  .navbar-right {
+  .nav.navbar-right,
+  .nav.navbar-right.navbar-collapse {
     position: absolute;
     z-index: 999;
     background: white;
     transform: rotate(180deg);
     right: -16px;
-    right: 63px;
+    top: 63px;
     box-shadow: 0 0 5px 0 #aaa;
+    padding: 10px 20px 5px;
     list-style-type: none;
     width: max-content;
-    border-top: 4px solid var(--light-purple);
+    display: block;
+    border-top: 4px solid var(--bright-purple);
     border-radius: 3px;
   }
 
-  .navbar-right.navbar-right-hide {
+  .nav.navbar-right.navbar-collapse.collapse {
     display: none;
   }
 
-  .hamburger-icon {
+  .nav.navbar-right.navbar-collapse.collapse.show {
+    display: block !important;
+  }
+
+  .nav.navbar-right > li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: rotate(180deg);
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+
+  .nav > li > a {
+    color: black !important;
+    opacity: 0.5;
+  }
+
+  .nav > li > a:hover {
+    opacity: 1;
+  }
+
+  .navbar-toggler {
     display: block;
   }
 
   .body {
     padding-top: 67px;
+  }
+
+  /* Article */
+  .article-card {
+    width: 50%;
+  }
+  /* Article */
+}
+
+@media (max-width: 450px) {
+  .article-card {
+    width: 100%;
   }
 }
