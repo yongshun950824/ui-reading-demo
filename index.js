@@ -1,5 +1,6 @@
 // Import stylesheets
-import './style.css';
+// Only uncomment in StackBlitz
+// import './style.css';
 
 var topics = [
   { value: 'All', label: 'All Topic' },
